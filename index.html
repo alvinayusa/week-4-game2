@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Crystal Game</title>
+    <style>
+        .img-thumbnail {
+            width: 220px;
+            height: 130px;
+        }
+
+        .card-body {
+            color: black;
+            border: 25%;
+        }
+    </style>
+</head>
+
+<body>
+        <div class="card bg-dark text-white">
+            <img class="card-img" src="assets/images/teslabkground.jpg" alt="Card image">
+            <div class="card-img-overlay">
+                <h5 class="card-title"> Car Numbers Game</h5>
+                <p class="card-text">You will be given a random number at the start of the game. There are four cars below. By clicking each car,
+                    you will add a specific number of points to your total score</p>
+                <p class="card-text">The goal of the game is to match
+                    <bold>EXACTLY</bold> your total score to the random number. You lose the game if your total score goes above
+                    the random number.</p>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <img id = "modelS" src="assets/images/models.jpeg" alt="model s" class="img-thumbnail carImages">
+                    </div>
+                    <div class="col-md-3">
+                        <img id = "modelX" src="assets/images/modelx.jpg" alt="model x" class="img-thumbnail carImages">
+                    </div>
+                    <div class="col-md-3">
+                        <img id = "roadster" src="assets/images/roadster.jpg" alt="roadster" class="img-thumbnail carImages">
+                    </div>
+                    <div class="col-md-3">
+                        <img id = "model3" src="assets/images/model3.png" alt="model 3" class="img-thumbnail carImages">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Random Number</h5>
+                                <p id="randomNumber" class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Number of Wins</h5>
+                                <p id = "numberOfWins" class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Number of Losses</h5>
+                                <p id = "numberOfLoss" class="card-text"> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5  class="card-title">Your Total Number</h5>
+                                <p id = "totalCarNum" class="card-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
