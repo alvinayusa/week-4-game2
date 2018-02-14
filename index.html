@@ -22,79 +22,90 @@
 </head>
 
 <body>
-        <div class="card bg-dark text-white">
-            <img class="card-img" src="assets/images/teslabkground.jpg" alt="Card image">
-            <div class="card-img-overlay">
-                <h5 class="card-title"> Car Numbers Game</h5>
-                <p class="card-text">You will be given a random number at the start of the game. There are four cars below. By clicking each car,
-                    you will add a specific number of points to your total score</p>
-                <p class="card-text">The goal of the game is to match
-                    <bold>EXACTLY</bold> your total score to the random number. You lose the game if your total score goes above
-                    the random number.</p>
+    <div class="card bg-dark text-white">
+        <img class="card-img" src="assets/images/teslabkground.jpg" alt="Card image">
+        <div class="card-img-overlay">
+            <h5 class="card-title"> Car Numbers Game</h5>
+            <p class="card-text">You will be given a random number at the start of the game. There are four cars below. By clicking each car,
+                you will add a specific number of points to your total number</p>
+            <p class="card-text">The goal of the game is to match
+                <bold>EXACTLY</bold> your total number to the random number. You lose the game if your total score goes above the
+                random number.</p>
 
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="carImages">
-                            <img src="assets/images/models.jpeg" alt="model s" class="img-thumbnail">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="carImages">
-                            <img src="assets/images/modelx.jpg" alt="model x" class="img-thumbnail">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="carImages">
-                            <img  src="assets/images/roadster.jpg" alt="roadster" class="img-thumbnail">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="carImages">
-                            <img  src="assets/images/model3.png" alt="model 3" class="img-thumbnail">
-                        </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="carImages">
+                        <img id='myCar-0' src="assets/images/models.jpeg" alt="model s" class="img-thumbnail">
                     </div>
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Random Number</h5>
-                                <p id="randomNumber" class="card-text"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Number of Wins</h5>
-                                <p id = "numberOfWins" class="card-text"> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Number of Losses</h5>
-                                <p id = "numberOfLoss" class="card-text"> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5  class="card-title">Your Total Number</h5>
-                                <p id = "totalCarNum" class="card-text"></p>
-                            </div>
-                        </div>
+                <div class="col-md-3">
+                    <div class="carImages">
+                        <img id='myCar-1' src="assets/images/modelx.jpg" alt="model x" class="img-thumbnail">
                     </div>
                 </div>
-
+                <div class="col-md-3">
+                    <div class="carImages">
+                        <img id='myCar-2' src="assets/images/roadster.jpg" alt="roadster" class="img-thumbnail">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="carImages">
+                        <img id='myCar-3' src="assets/images/model3.png" alt="model 3" class="img-thumbnail">
+                    </div>
+                </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Random Number</h5>
+                            <p id="randomNumber" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Number of Wins</h5>
+                            <p id="numberOfWins" class="card-text"> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Number of Losses</h5>
+                            <p id="numberOfLoss" class="card-text"> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Your Total Number</h5>
+                            <p id="totalCarNum" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h2 id="msgBox">Let's start the cars!</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+
         </div>
+    </div>
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
 </body>

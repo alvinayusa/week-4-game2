@@ -27,7 +27,9 @@ $(document).ready(function () {
     
     var randNum = 0
     var totalNum = 0
-    
+    function rand () {
+        return Math.floor(Math.random() * 20)
+    }
     // this function will start the game
     function startGame() {
         // display the total number of the cars to the html.
@@ -40,15 +42,15 @@ $(document).ready(function () {
         
         //generate the random number per car and assign it per car.
         for (var i = 0; i < 4; i++){
-            carsArr[i].value = Math.floor(Math.random() * 20)
+            carsArr[i].value = rand()
             
             //display to the html the randomized number for each car.
-            $(".carImages").attr("carNum", carsArr[i].value)
+            $("#myCar-" + i).attr("carNum", carsArr[i].value)
         }
     }
     startGame()
     
-    $(".carImages").on("click", function(){
+    $(".img-thumbnail").on("click", function(){
         var carNumbers = parseInt( $(this).attr("carNum"))
         totalNum += carNumbers
         console.log(totalNum)
@@ -60,11 +62,13 @@ $(document).ready(function () {
         if (randNum === totalNum){
             wins++
             $("#numberOfWins").text(wins)
+            $("#msgBox").text("You aced the race! Go get more!")
             startGame()
         }
         else if (totalNum > randNum){
             loss++
             $("#numberOfLoss").text(loss)
+            $("#msgBox").text("You're a loser! Try again!")
             startGame()
         }
     })
